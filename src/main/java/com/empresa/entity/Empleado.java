@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -30,6 +31,7 @@ public class Empleado {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaRegistro;
 	
+	@ManyToOne
 	@JoinColumn(name = "idPais")
 	private Pais pais;
 }
